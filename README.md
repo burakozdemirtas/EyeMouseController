@@ -10,7 +10,7 @@ Projemizin amacı kullanım engeli olanların mouse kullanmalarını hedeflemek.
 
 * [:fire: Geliştiriciler](#fire-geliştiriciler)
 
-# :fire: Geliştiriciler
+# :fire: Geliştirici
 | Adı Soyadı | 
 | :--- | 
 | [Burak ÖZDEMİRTAŞ](https://github.com/burakozdemirtas) |
