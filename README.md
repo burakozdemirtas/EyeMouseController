@@ -9,8 +9,11 @@
 Projemizin amacı kullanım engeli olanların mouse kullanmalarını hedeflemek. Eye Mouse Controller projesi kullanım engeli olanların fareyi kullanmasını amaçlamıştır. Bu amaç doğrultusunda yüzün bazı noktaları baz alınıp bu noktalar ile mouse kontrolü, Click eventi, DoubleClick özellikleri başarıyla yapılmıştır.
 
 * [:fire: Geliştiriciler](#fire-geliştiriciler)
+* :hash: Çalışma Mantığı Nedir?
 
 # :fire: Geliştirici
 | Adı Soyadı | 
 | :--- | 
 | [Burak ÖZDEMİRTAŞ](https://github.com/burakozdemirtas) |
+
+# :hash: Çalışma Mantığı Nedir?
