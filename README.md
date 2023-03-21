@@ -1,5 +1,3 @@
-# Bu alan güncellenmeye devam etmektedir.
-<br>
 <div align="center">
 <img src="https://user-images.githubusercontent.com/33163650/209447604-e6777409-d517-45a7-abc6-4a24eb620966.png" width="160" height="160">
 </div>
