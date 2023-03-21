@@ -9,12 +9,13 @@
 Projemizin amacı kullanım engeli olanların mouse kullanmalarını hedeflemek. Eye Mouse Controller projesi kullanım engeli olanların fareyi kullanmasını amaçlamıştır. Bu amaç doğrultusunda yüzün bazı noktaları baz alınıp bu noktalar ile mouse kontrolü, Click eventi, DoubleClick özellikleri başarıyla yapılmıştır.
 </p>
 
-*  [:fire: Geliştiriciler](#fire-geliştiriciler)
-*  [:hash: Amaç](hash-Amaç)
-*  :hash: Çalışma Mantığı Nedir?
-*  #️⃣ Sonuç ve Tartışma
+*  [:fire: Geliştirici](#fire-geliştirici)
+*  [:hash: Amaç](#hash-amaç)
+*  [:hash: Model Mimarisine Genel Bakış](#hash-model-mimarisine-genel-bakış)
+*  [:hash: Çalışma Mantığı Nedir?](#hash-çalışma-mantığı-nedir)
+*  [:hash: Sonuç ve Tartışma](#hash-sonuç-ve-tartışma)
 
-# :fire: Geliştiriciler
+# :fire: Geliştirici
 | Adı Soyadı | 
 | :--- | 
 | [Burak ÖZDEMİRTAŞ](https://github.com/burakozdemirtas) |
@@ -23,7 +24,23 @@ Projemizin amacı kullanım engeli olanların mouse kullanmalarını hedeflemek.
 <p align="justify">
 Manuel kontrol gerektiren bilgisayar gibi cihazlarda, fiziksel temasta zorlanan, fiziksel engelli, Multipl Skleroz(MS), Amiyotrofik Lateral Skleroz (ALS), boyundan aşağısı felçli veya kısmı felçli hasta bireylerin fare kullanımı zordur. Bu proje bireylerin fare erişimini kolaylaştırmayı hedeflemiştir. Bu çalışmada bireylerin kafa, göz ve ağız hareketleri ile fareyi kontrol edebilecekleri bir sistem geliştirilmiştir. Sistem bireyin yüz hareketlerini kameradan almaktadır. Sağ gözün dairesel dört noktasını algılayıp, fare kontrolü sağlamaktadır. Sol gözün göz kapakları aralıklarındaki fark ile tıklama yapmaktadır. Dudaklar arasındaki fark ile çift tıklama yapmaktadır. Bu sistem manuel kontrol gerektiren cihazlarda fare erişimini kolaylaştırmıştır. Deneysel olarak tasarlanan bu sistem tatmin edici sonuçlar ortaya çıkarmıştır. 
   </p>
+</br>
+</br>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/33163650/226713833-09a210e1-22e8-4fcc-92ba-7b344ab18c0f.png" width="" height="250" >
+</div>
 
+# :hash: Model Mimarisine Genel Bakış
+<p align="justify">
+  Yüz tanıma sistemi, bir görüntü algılama cihazı (örneğin, bir kamera) aracılığıyla bir görüntü alır. Bu görüntü, bir görüntü işleme modülü tarafından işlenir. Bu modül, görüntüdeki yüz noktalarını (gözler, ağız ve diğer noktalar) tespit eder ve bu noktalar için etiketler oluşturur. Oluşturulan etiketler, sistem tarafından önceden eğitilmiş bir yüz tanıma modeline göre oluşturulmuştur ve bu model, yüzün birçok noktalarını tespit eder. Bu noktaların verdiği değerler ile ekranın x ve y eksenlerine göre işlem yaptırılıp fare kontrol, tıklama, çift tıklama işlemleri yapılır.  
+</br> </br>
+Göz ile fare kontrolü, bilgisayar kullanımını engel olan insanlar için alternatif bir yöntem olabilir. Bu yöntem sayesinde, fiziksel olarak elle tutulan fare cihazı kullanılmadan da bilgisayar kontrol edilebilir. Göz ile fare kontrolü yöntemleri, genellikle görüntü işleme yöntemleri kullanılarak yapılır ve bu yöntemler sayesinde, göz hareketleri takip edilerek fare hareketleri ve tıklama işlemleri yapılabilir. Bu yöntemlerin bazıları, yüz tanıma ve nesne tespiti yöntemlerini kullanarak çalışırken, bazıları ise göz izleme teknolojisi kullanarak çalışmaktadır. Bu yöntemler arasında, "EyeTribe", "Tobii EyeX" ve "EyeControl" gibi çeşitli ürünler mevcuttur. Bu yöntemlerin etkili olduğu ve kullanımının kolay olduğu gösterilmiştir, ancak bazı kullanıcılar için bu yöntemlerin doğru çalışması için gözlerin doğru pozisyonlarda olması gerektiği de belirtilmiştir. 
+</br></br>
+Bu projede gözlerin doğru noktada olmasına gerek yoktur. Gözlerin çevre noktaları hedef alındığından göz konumlarının önemi yoktur.  Şaşılık (strabismus), gözlerin eşit olmayan şekilde hareket etmesi durumudur. Bu durumda, bir göz düzgün bir şekilde hedefe odaklanırken, diğer göz hedefe odaklanamayabilir veya farklı bir yöne bakabilir. Bu durum nedeniyle, gözler arasında görme bozuklukları ortaya çıkabilir ve gözler arasındaki denge bozulabilir. Projemiz bu durumda çalışmakta, gözlerin konumunu baz almamaktadır. Gözlükler, görme bozuklukları olan insanlar için kullanılan bir optik alettir. Bu aletler sayesinde, görme bozuklukları olan insanlar düzgün bir şekilde görebilirler ve görme bozukluklarının neden olduğu sıkıntılar azaltılır. Projemiz gözlük kullanılmasından etkilenmemektedir. Sonuç olarak projemiz çeşitli göz hastalıklarından etkilenmemektedir.
+
+  </p>
+  
+  
 # :hash: Çalışma Mantığı Nedir?
 <p align="justify">
 Bu proje Python programlama dilinde yazılmıştır. Kütüphane olarak OpenCv(Open Source Computer Vision), Mediapipe[4], Pyautogui kütüphaneleri kullanılmıştır. 
