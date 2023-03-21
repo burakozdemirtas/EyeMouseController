@@ -41,12 +41,24 @@ Bu projede gözlerin doğru noktada olmasına gerek yoktur. Gözlerin çevre nok
   
 # :hash: Çalışma Mantığı Nedir?
 <p align="justify">
-Bu proje Python programlama dilinde yazılmıştır. Kütüphane olarak OpenCv(Open Source Computer Vision), Mediapipe[4], Pyautogui kütüphaneleri kullanılmıştır. 
+Bu proje Python programlama dilinde yazılmıştır. Kütüphane olarak OpenCv(Open Source Computer Vision), Mediapipe, Pyautogui kütüphaneleri kullanılmıştır. 
+</br>
+</br>
 OpenCv kütüphanesi ile Görüntü işleme yapılıp, bilgisayar kamerası tanıtılmıştır. Kameranın yansıma özelliği kaldırılmıştır. OpenCv kütüphanesi ile renkli görüntü alma, yüzdeki belirli noktaların daireler halinde çizdirilip kullanıcıya gösterimi sağlanmıştır. Projeden çıkma komutu OpenCv kütüphanesi ile yapılmıştır.
-Mediapipe[4]  kütüphanesi[4] görüntü ve ses işleme, mobil uygulamalar ve gerçek zamanlı çözümler geliştirme gibi alanlarda kullanılmaktadır. Mediapipe kütüphanesinin facemesh alanı yüz tanımlama için kullanılmıştır. Yüzün dört yüz altmış sekiz noktasını tanımlamaktadır. Mediapipe ile sol göz üst ve alt kapağı, sağ göz bebeğinin yuvarlağının x ve y ekseninde toplam dört noktası, alt ve üst dudak noktaları belirlenmiştir.
+</br>
+</br>
+Mediapipe kütüphanesi görüntü ve ses işleme, mobil uygulamalar ve gerçek zamanlı çözümler geliştirme gibi alanlarda kullanılmaktadır. Mediapipe kütüphanesinin facemesh alanı yüz tanımlama için kullanılmıştır. Yüzün dört yüz altmış sekiz noktasını tanımlamaktadır. Mediapipe ile sol göz üst ve alt kapağı, sağ göz bebeğinin yuvarlağının x ve y ekseninde toplam dört noktası, alt ve üst dudak noktaları belirlenmiştir.
+</br>
+</br>
 Pyautogui, Python dilinde yazılmış bir otomatik kontrol kütüphanesidir. Pyautogui, bilgisayar otomatik kontrolü sağlamak için kullanılır. Projede Pyautogui fare hızının arttırılıp azaltılması, fare hareketlendirilmesi, tıklama işlemi, çift tıklama işleminde kullanılan bir kütüphanedir.
+</br>
+</br>
 OpenCv, Mediapipe ve Pyautogui kütüphaneleri kullanılarak, sağ gözün bebeğinin x ve y ekseninde son noktaları seçilerek, dört nokta belirlenmiştir. Bu dört nokta ile farenin x ve y eksenin de hareketlenmesi sağlanmıştır.
+</br>
+</br>
 OpenCv, Mediapipe ve Pyautogui kütüphaneleri kullanılarak, sol gözün üst ve alt kapağı tespit edilmiştir. Tespit yapılan noktaların değerlerinin birbirlerine yaklaşımını çıkartıp, çıkan değer ile normal göz kırpmadan farklı bir aralığına ininceye kadar hesaplamalar yapılmıştır. Bu hesaplamalar sonucunda 0.005 değerine ulaşılınca tıklama işlemi başarı ile yapılmıştır.
+</br>
+</br>
 OpenCv, Mediapipe ve Pyautogui kütüphaneleri kullanılarak, üst dudak ve alt dudak bölgeleri tespit edilmiştir. Tespit yapılan noktaların değerlerinin birbirinden uzaklaşması toplanmıştır. Çıkan değer sonucunda 0.08 değerine ulaşınca çift tıklama işlemi yapılmıştır.
   </p>
 
